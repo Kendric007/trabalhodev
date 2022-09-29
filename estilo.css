@@ -1,0 +1,408 @@
+@font-face {
+    font-family: "Barlow";
+    src: url('../fonts/Barlow-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow";
+    src: url('../fonts/Barlow-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow";
+    src: url('../fonts/Barlow-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mitr";
+    src: url('../fonts/Mitr-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mitr";
+    src: url('../fonts/Mitr-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/**** Padrão ****/
+
+:root{
+	--corFundo: #000;
+	--corPrimaria: #00A6ED;
+	/*--corSecundaria: #d4b679;*/
+	--corTexto: #fff;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	height: 100%;
+    font-family: "Barlow";
+    font-weight: normal;
+    background-color: var(--corFundo);
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	padding: 0;
+	margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+	padding: 0;
+	margin: 0;
+}
+
+a{
+	border-radius: 0;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+
+/*** Topo ***/ 
+
+#topo{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0 13px 0;
+    background-color:  rgba(0,0,0,1);
+    z-index: 9999;
+}
+
+#topo img{
+    width: 100%;
+}
+
+#topo ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+#topo ul li{
+    display: inline-block;
+}
+
+#topo ul li a{
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 12px 10px;
+    display: block;
+    line-height: 100%;
+}
+#topo ul li a:hover{
+    color: #00A6ED;
+}
+
+#topo .btn-cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 100%;
+    padding: 10px 20px;
+    background-color: #00A6ED;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/*** Banner ***/
+
+#banner{
+    background-image: url('../imagens/show.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 320px 0 280px 0;
+    text-align: center;
+}
+
+#banner h1{
+    border-radius: 6px;
+    font-family: "Mitr";
+    font-size: 65px;
+    text-transform: uppercase;
+    margin: 0 auto 30px auto;
+    padding-top: 2px;
+}
+
+#banner h1 span{
+    color: var(--corPrimaria);
+}
+
+#banner i{
+    display: inline-block;
+    line-height: 100%;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    background-color: var(--corPrimaria);
+    text-align: center;
+    padding: 13px 0 0 1px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+#banner .fa-play:before{
+    padding: 11px 0 0 3px;
+}
+
+#banner .fa-stop:before{
+    padding: 11px 0 0 0px;
+}
+
+#banner .fa-pause:before{
+    position: relative;
+    left: -1px;
+}
+
+/*** Musicas ***/
+
+#musicas{
+    padding: 50px 0 0 0;
+}
+
+#musicas h2{
+    position: relative;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#musicas h2::after{
+    content: " ";
+    background-color: var(--corPrimaria);
+    width: 50%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+#musicas .ver-mais{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+
+#musicas .ver-mais a{
+    color: var(--corTexto);
+    text-transform: uppercase;
+    font-size: 12px;
+    border: 1px solid var(--corPrimaria);
+    padding: 3px 8px;
+    position: absolute;
+    margin-right: 10px;
+    right: 0;
+    bottom: 0;
+}
+
+#musicas .ver-mais a:hover{
+    background-color: var(--corPrimaria);
+    transition: 0.3s;
+}
+
+#musicas .ver-mais a i{
+    margin-left: 5px;
+}
+
+#musicas .blocos-musicas{
+    padding: 50px 0;
+}
+
+#musicas .blocos-musicas .bloco{
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255,255,255,.14);
+    width: 172px;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0 10px 10px 0 ;
+}
+
+#musicas .blocos-musicas .bloco:hover{
+    transform: scale(1.06);
+    background-color: rgba(255,255,255,.2);
+}
+
+#musicas .blocos-musicas .bloco img{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+#musicas .blocos-musicas .bloco h3{
+    color: var(--corTexto);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+#musicas .blocos-musicas .bloco p{
+    text-align: left;
+    color: var(--corTexto);
+}
+
+/*** player ***/
+
+#musicas .blocos-musicas .bloco .play{
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 100%;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    background-color: var(--corPrimaria);
+    text-align: center;
+    padding: 7px 0 0 4px;
+    border-radius: 50%;
+}
+
+
+/*** Artistas ***/
+
+#artistas{
+    background-image: url('../imagens/guitarra.jpg');
+    background-position: -10% 50% ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px 0 50px 0;
+}
+
+#artistas h2{
+    position: relative;
+    font-family: "Mitr";
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+#artistas h2::after{
+    content: " ";
+    background-color: var(--corPrimaria);
+    width: 50%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+#artistas ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#artistas .flexslider{
+    background: transparent;
+    border: 0;
+}
+
+#artistas ul li{
+    display: inline-block;
+}
+
+#artistas .bloco-artistas{
+    width: 100%;
+}
+
+#artistas .bloco-artistas img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+#artistas .bloco-artistas .descricao{
+    padding: 15px 0;
+}
+
+#artistas .bloco-artistas .descricao h3{
+    font-family: "Mitr";
+    text-transform: capitalize;
+    color: var(--corPrimaria);
+    letter-spacing: 1.2px;
+    margin-bottom: 15px;
+}
+
+#artistas .bloco-artistas .descricao p{
+    font-size: 18px;
+}
+
+#artistas .next-menu{
+    color: var(--corPrimaria);
+    font-size: 30px;
+    position: absolute;
+    top: 40%;
+    right: -20px;
+    z-index: 99;
+}
+
+#artistas .prev-menu{
+    color: var(--corPrimaria);
+    font-size: 30px;
+    position: absolute;
+    top: 40%;
+    left: -20px;
+    z-index: 99;
+}
+
+
+@media only screen  and (max-width: 380px) {
+    
+    /*** Musicas ***/
+
+    #musicas .blocos-musicas{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #musicas .blocos-musicas .bloco{
+        width: 168px;
+        margin: 0 0 10px 0 ;
+    }
+
+    /*** Artistas ***/
+
+    #artistas .next-menu{
+        top: 40%;
+        right: 0px;
+    }
+    
+    #artistas .prev-menu{
+        top: 40%;
+        left: 0px;
+    }
+}
